@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chennai Super Kings - Official Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cskYellow: {
+              light: '#ffd54f',
+              DEFAULT: '#f2c01e',
+              dark: '#e6b000',
+            },
+            cskBlue: {
+              light: '#1565c0',
+              DEFAULT: '#002366',
+              dark: '#001a4d',
+            },
+          },
+          animation: {
+            'fade-in-down': 'fadeInDown 1s ease-out',
+            'fade-in-up': 'fadeInUp 1s ease-out',
+            'fade-in': 'fadeIn 0.5s ease-out',
+            'fade-in-left': 'fadeInLeft 1s ease-out',
+            'fade-in-right': 'fadeInRight 1s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+            'rotate-in': 'rotateIn 0.5s ease-out',
+            'bounce': 'bounce 2s ease-in-out infinite',
+            'wave': 'wave 2.5s ease-in-out infinite',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'slide-up-fade-in': 'slideUpFadeIn 0.5s ease-out',
+            'rotate-scale': 'rotateScale 10s linear infinite',
+            'background-pan': 'backgroundPan 3s linear infinite',
+            'pulse-ring': 'pulseRing 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite',
+            'shine': 'shine 3s infinite linear',
+          },
+          keyframes: {
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { 
+                boxShadow: '0 0 0 0 rgba(242, 192, 30, 0.7)',
+                transform: 'scale(1)'
+              },
+              '50%': { 
+                boxShadow: '0 0 20px 10px rgba(242, 192, 30, 0.4)',
+                transform: 'scale(1.05)'
+              },
+            },
+            shine: {
+              '0%': { backgroundPosition: '-100% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            },
+            rotateIn: {
+              '0%': { transform: 'rotateY(90deg)', opacity: '0' },
+              '100%': { transform: 'rotateY(0)', opacity: '1' },
+            },
+            bounce: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            wave: {
+              '0%': { transform: 'rotate(0deg)' },
+              '10%': { transform: 'rotate(14deg)' },
+              '20%': { transform: 'rotate(-8deg)' },
+              '30%': { transform: 'rotate(14deg)' },
+              '40%': { transform: 'rotate(-4deg)' },
+              '50%': { transform: 'rotate(10deg)' },
+              '60%, 100%': { transform: 'rotate(0deg)' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.8)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            slideUpFadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            rotateScale: {
+              '0%': { transform: 'rotate(0deg) scale(1)' },
+              '50%': { transform: 'rotate(180deg) scale(1.2)' },
+              '100%': { transform: 'rotate(360deg) scale(1)' },
+            },
+            backgroundPan: {
+              '0%': { backgroundPosition: '0% center' },
+              '100%': { backgroundPosition: '-200% center' },
+            },
+            pulseRing: {
+              '0%': { transform: 'scale(0.8)', opacity: '0.8' },
+              '50%': { transform: 'scale(1)', opacity: '0.5' },
+              '100%': { transform: 'scale(1.2)', opacity: '0' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .jersey-pattern {
+        @apply bg-cskYellow bg-[radial-gradient(circle_at_25px_25px,theme(colors.cskYellow.light)_2%,transparent_0%),radial-gradient(circle_at_75px_75px,theme(colors.cskYellow.light)_2%,transparent_0%)] bg-[length:100px_100px];
+      }
+      
+      .jersey-pattern-dark {
+        @apply bg-cskBlue bg-[radial-gradient(circle_at_25px_25px,theme(colors.cskBlue.light)_2%,transparent_0%),radial-gradient(circle_at_75px_75px,theme(colors.cskBlue.light)_2%,transparent_0%)] bg-[length:100px_100px];
+      }
+      
+      .gradient-text {
+        @apply bg-gradient-to-r from-cskYellow to-cskYellow-dark bg-clip-text text-transparent;
+      }
+      
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+      .shine-effect {
+        @apply relative overflow-hidden;
+      }
+      
+      .shine-effect::after {
+        content: '';
+        @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent bg-[length:200%_100%] animate-shine;
+      }
+      
+      .glass-effect {
+        @apply bg-cskBlue/70 backdrop-blur-md border border-cskYellow/30;
+      }
+      
+      .perspective {
+        perspective: 1000px;
+      }
+      
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      
+      .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+      
+      .footer-wave {
+        position: absolute;
+        top: -70px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+      }
+
+      .footer-wave svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 70px;
+      }
+
+      .footer-wave .shape-fill {
+        fill: theme('colors.cskBlue');
+      }
+      
+      /* Player Card Flip Effect */
+      .flip-card {
+        @apply perspective h-full w-full;
+      }
+      
+      .flip-card-inner {
+        @apply relative w-full h-full transition-transform duration-500 preserve-3d;
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        @apply absolute w-full h-full backface-hidden overflow-hidden rounded-xl;
+      }
+      
+      .flip-card-back {
+        @apply rotate-y-180 bg-gradient-to-b from-cskBlue-light to-cskBlue p-4;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        @apply bg-gray-800;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        @apply bg-cskYellow rounded-full;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-cskYellow-dark;
+      }
+    }
+    /* Player Carousel Container */
+.player-carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+  background: linear-gradient(to bottom, #ffcc00, #e6b800);
+  border-radius: 1rem;
+  box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Player Carousel */
+.player-carousel {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.player-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Player Card */
+.player-card {
+  flex-shrink: 0;
+  width: 280px;
+  height: 420px;
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: linear-gradient(to bottom, #003399, #001f66);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  border-color: #ffcc00;
+}
+
+/* Player Image Container */
+.player-image-container {
+  height: 65%;
+  position: relative;
+  overflow: hidden;
+background-color: transparent;
+}
+
+.player-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.player-card:hover .player-image {
+  transform: scale(1.1);
+}
+
+/* Player Number */
+.player-number {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffcc00;
+  color: #001f66;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.125rem;
+}
+
+/* Player Star Badge */
+.player-star {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 51, 153, 0.85);
+  color: #ffcc00;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Player Info */
+.player-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+.player-country {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #ffcc00;
+  font-size: 0.875rem;
+}
+
+.player-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.player-role {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.75rem;
+}
+
+/* Player Stats */
+.player-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.stat-box {
+  background-color: rgba(21, 101, 192, 0.5);
+  border-radius: 0.25rem;
+  padding: 0.3rem;
+  border: 1px solid rgba(242, 192, 30, 0.2);
+}
+
+.stat-label {
+  display: block;
+  color: #9ca3af;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: white;
+}
+
+/* Player Border */
+.player-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #ffcc00, #e6b800, #ffcc00);
+}
+
+/* Carousel Navigation */
+.player-carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.player-carousel-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #003399;
+  color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid #ffcc00;
+}
+
+.player-carousel-arrow:hover {
+  background-color: #ffcc00;
+  color: #003399;
+  transform: scale(1.1);
+}
+
+/* Carousel Dots */
+.player-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.player-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(242, 192, 30, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.player-carousel-dot.active {
+  background-color: #ffcc00;
+  transform: scale(1.2);
+}
+ /* Player Filter Buttons */
+ .player-filter-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .player-filter-button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .player-filter-button.active {
+      background-color: blue;
+      color: var(--csk-blue);
+    }
+
+    .player-filter-button:not(.active) {
+      background-color: var(--csk-blue);
+      color: white;
+      border: 2px solid var(--csk-yellow);
+    }
+
+    .player-filter-button:hover:not(.active) {
+      background-color: rgba(242, 192, 30, 0.2);
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background-color: rgba(242, 192, 30, 0.2);
+      border-radius: 9999px;
+      padding: 0.25rem 1rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid rgba(242, 192, 30, 0.3);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.875rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 2px 10px rgba(242, 192, 30, 0.2);
+    }
+
+  </style>
+</head>
+<body class="font-sans bg-gray-900 text-white overflow-x-hidden">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-cskYellow-dark via-cskYellow to-cskYellow-dark shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <!-- Logo Section -->
+        <div class="flex items-center">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-cskBlue to-cskBlue-light blur-sm opacity-0 group-hover:opacity-100 transition duration-300 rounded-full"></div>
+            <div class="relative">
+              <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK Logo" class="h-14 w-auto transition-transform duration-300 hover:scale-105" width="100" height="50">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:block">
+          <ul class="flex space-x-8">
+            <li>
+              <a href="#home" class="nav-link relative text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300 py-2 flex items-center">
+                <span>Home</span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cskBlue transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#fixtures" class="nav-link relative text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300 py-2 flex items-center">
+                <span>Fixtures</span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cskBlue transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#points" class="nav-link relative text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300 py-2 flex items-center">
+                <span>Points Table</span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cskBlue transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#players" class="nav-link relative text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300 py-2 flex items-center">
+                <span>Players</span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cskBlue transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#merchandise" class="nav-link relative text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300 py-2 flex items-center">
+                <span>Merchandise</span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cskBlue transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link relative text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300 py-2 flex items-center">
+                <span>Contact</span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cskBlue transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        
+        <!-- Tablet Navigation -->
+        <nav class="hidden md:block lg:hidden">
+          <ul class="flex space-x-5">
+            <li><a href="#home" class="text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300">Home</a></li>
+            <li><a href="#fixtures" class="text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300">Fixtures</a></li>
+            <li><a href="#points" class="text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300">Points</a></li>
+            <li><a href="#players" class="text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300">Players</a></li>
+            <li><a href="#contact" class="text-cskBlue font-semibold hover:text-cskBlue-dark transition-colors duration-300">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <div class="block md:hidden">
+          <button class="bg-cskBlue text-cskYellow p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cskBlue-light hover:bg-cskBlue-dark transition-all duration-300" id="mobile-menu-button" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- CTA Button (visible on larger screens) -->
+        <div class="hidden xl:block">
+          <a href="#tickets" class="bg-cskBlue text-cskYellow font-bold py-2 px-4 rounded-full shadow-md hover:bg-cskBlue-dark transform hover:scale-105 transition-all duration-300 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+            </svg>
+            BUY TICKETS
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Progress Bar for Scroll (appears when scrolling) -->
+    <div class="h-1 bg-gradient-to-r from-cskBlue via-cskBlue-light to-cskBlue w-0" id="scroll-progress"></div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300" id="overlay"></div>
+  
+  <!-- Mobile Menu -->
+  <div class="fixed top-0 right-0 bottom-0 w-4/5 max-w-xs bg-cskBlue z-50 transform translate-x-full transition-transform duration-300 ease-in-out border-l-3 border-cskYellow p-6" id="mobile-menu">
+    <button class="absolute top-4 right-4 text-cskYellow text-xl focus:outline-none" id="mobile-menu-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="flex items-center mb-8 mt-4">
+      <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK Logo" class="mr-3 w-10 h-auto">
+      <span class="gradient-text text-xl font-bold">Chennai Super Kings</span>
+    </div>
+    <ul class="space-y-4">
+      <li><a href="#home" class="flex items-center text-white hover:text-cskYellow transition-colors duration-300 py-2 border-b border-cskYellow/20"><i class="fas fa-home w-8 text-cskYellow"></i> Home</a></li>
+      <li><a href="#fixtures" class="flex items-center text-white hover:text-cskYellow transition-colors duration-300 py-2 border-b border-cskYellow/20"><i class="fas fa-calendar-alt w-8 text-cskYellow"></i> Fixtures</a></li>
+      <li><a href="#points" class="flex items-center text-white hover:text-cskYellow transition-colors duration-300 py-2 border-b border-cskYellow/20"><i class="fas fa-table w-8 text-cskYellow"></i> Points Table</a></li>
+      <li><a href="#players" class="flex items-center text-white hover:text-cskYellow transition-colors duration-300 py-2 border-b border-cskYellow/20"><i class="fas fa-users w-8 text-cskYellow"></i> Players</a></li>
+      <li><a href="#merchandise" class="flex items-center text-white hover:text-cskYellow transition-colors duration-300 py-2 border-b border-cskYellow/20"><i class="fas fa-tshirt w-8 text-cskYellow"></i> Merchandise</a></li>
+      <li><a href="#contact" class="flex items-center text-white hover:text-cskYellow transition-colors duration-300 py-2 border-b border-cskYellow/20"><i class="fas fa-envelope w-8 text-cskYellow"></i> Contact</a></li>
+    </ul>
+    <div class="mt-8 pt-4 border-t border-cskYellow/20">
+      <div class="flex justify-center space-x-4">
+        <a href="#" class="w-10 h-10 rounded-full bg-cskBlue-light flex items-center justify-center text-white hover:bg-cskYellow hover:text-cskBlue transition-all duration-300">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-cskBlue-light flex items-center justify-center text-white hover:bg-cskYellow hover:text-cskBlue transition-all duration-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-cskBlue-light flex items-center justify-center text-white hover:bg-cskYellow hover:text-cskBlue transition-all duration-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-10 h-10 rounded-full bg-cskBlue-light flex items-center justify-center text-white hover:bg-cskYellow hover:text-cskBlue transition-all duration-300">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen overflow-hidden bg-cskBlue">
+    <!-- Hero Background -->
+    <div class="absolute inset-0 bg-[url('https://www.chennaisuperkings.com/assets/images/csk-banner.jpg')] bg-cover bg-center opacity-30"></div>
+    
+    <!-- Hero Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-cskBlue via-cskBlue/70 to-transparent"></div>
+    
+    <!-- Hero Particles -->
+    <div class="absolute inset-0 overflow-hidden z-10" id="hero-particles"></div>
+    
+    <!-- Hero Content -->
+    <div class="relative h-full flex flex-col items-center justify-center text-center px-4 z-20">
+      <div class="inline-block bg-cskYellow/30 rounded-full px-4 py-1 mb-6 backdrop-blur-md border border-cskYellow/50 animate-pulse-glow">
+        <span class="text-sm font-medium text-cskYellow">5-TIME IPL CHAMPIONS</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 gradient-text text-shadow animate-fade-in-down">
+        CHENNAI SUPER KINGS
+      </h1>
+      
+      <p class="max-w-2xl text-lg md:text-xl text-gray-300 mb-8 text-shadow animate-fade-in-up">
+        The Pride of Tamil Nadu | Whistle Podu!
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4">
+        <button class="relative overflow-hidden bg-cskYellow text-cskBlue font-bold py-3 px-8 rounded-full animate-pulse-glow transition-transform duration-300 hover:scale-105 flex items-center justify-center group">
+          <i class="fas fa-ticket-alt mr-2 group-hover:animate-bounce"></i>
+          BUY TICKETS
+        </button>
+        
+        <button class="relative overflow-hidden bg-transparent border-2 border-cskYellow text-cskYellow font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-cskYellow/20 hover:scale-105 flex items-center justify-center">
+          <i class="fas fa-shopping-cart mr-2"></i>
+          SHOP MERCHANDISE
+        </button>
+      </div>
+    </div>
+    
+    <!-- Wave Divider -->
+    <svg class="absolute bottom-0 left-0 right-0 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="currentColor" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </section>
+<!-- Highlights Section -->
+<section id="highlights" class="py-16 jersey-pattern">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="flex flex-col items-center mb-12">
+        <div class="inline-block bg-cskYellow/20 rounded-full px-4 py-1 mb-2 border border-cskYellow/30">
+          <span class="text-sm font-medium text-cskBlue">RELIVE THE MOMENTS</span>
+        </div>
+        <h2 class="text-3xl font-bold text-cskBlue">MATCH <span class="text-cskBlue font-extrabold">HIGHLIGHTS</span></h2>
+      </div>
+  
+      <!-- Highlights Carousel -->
+      <div class="relative overflow-hidden rounded-xl shadow-2xl border-2 border-cskYellow/30">
+        <div class="flex transition-transform duration-500 ease-in-out h-[500px]" id="highlight-slides">
+  
+          <!-- Highlight Slide 1 -->
+          <div class="min-w-full flex-shrink-0 relative">
+            <div class="video-container w-full h-full relative">
+              <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/dc3d3b01-3e3f-4ccc-950a-a755c7447426/353bd62a-754d-436a-9527-29052b7f6f47/1280x720/match/image.jpg" 
+                   alt="CSK vs Mumbai Indians" 
+                   class="w-full h-full object-cover video-thumbnail cursor-pointer">
+              <iframe class="hidden absolute inset-0 w-full h-full" 
+                      data-video="https://www.youtube.com/embed/OLlJG3OCeaU?autoplay=1&mute=0" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-cskBlue via-cskBlue/30 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+              <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">CSK vs Mumbai Indians</h3>
+              <p class="text-gray-300 max-w-2xl mb-4">Dhoni's spectacular finish with a last-ball six secures victory in a nail-biting encounter.</p>
+              <button class="watch-btn inline-flex items-center bg-cskYellow/30 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300 hover:bg-cskYellow/50">
+                Watch Highlight <i class="fas fa-play ml-2"></i>
+              </button>
+            </div>
+          </div>
+  
+          <!-- Highlight Slide 2 -->
+          <div class="min-w-full flex-shrink-0 relative">
+            <div class="video-container w-full h-full relative">
+              <img src="https://cf-images.eu-west-1.prod.boltdns.net/v1/static/3588749423001/e9a038a5-86b3-4cf9-a863-b1798c0fbc7f/19b1718b-c0be-4155-8105-58e4eb8dcb93/1280x720/match/image.jpg" 
+                   alt="CSK vs RCB" 
+                   class="w-full h-full object-cover video-thumbnail cursor-pointer">
+              <iframe class="hidden absolute inset-0 w-full h-full" 
+                      data-video="https://www.youtube.com/embed/OLlJG3OCeaU?autoplay=1&mute=0" 
+                      allowfullscreen>
+              </iframe>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-cskBlue via-cskBlue/30 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+              <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">CSK vs Royal Challengers Bangalore</h3>
+              <p class="text-gray-300 max-w-2xl mb-4">Jadeja's all-round performance leads CSK to a dominant victory against RCB.</p>
+              <button class="watch-btn inline-flex items-center bg-cskYellow/30 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors duration-300 hover:bg-cskYellow/50">
+                Watch Highlight <i class="fas fa-play ml-2"></i>
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- Carousel Navigation -->
+      <div class="absolute top-1/2 left-0 right-0 flex justify-between px-4 transform -translate-y-1/2 z-10">
+        <button class="w-12 h-12 rounded-full bg-cskYellow/70 text-cskBlue flex items-center justify-center transition-all duration-300 hover:bg-cskYellow hover:scale-110" id="highlight-prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="w-12 h-12 rounded-full bg-cskYellow/70 text-cskBlue flex items-center justify-center transition-all duration-300 hover:bg-cskYellow hover:scale-110" id="highlight-next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+  
+      <!-- Carousel Indicators -->
+      <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-10">
+        <button class="w-10 h-3 rounded-full bg-cskYellow/30 transition-all duration-300 highlight-dot active" data-slide="0"></button>
+        <button class="w-10 h-3 rounded-full bg-cskYellow/30 transition-all duration-300 highlight-dot" data-slide="1"></button>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  
+  <!-- Fixtures Section -->
+  <section id="fixtures" class="py-16 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-cskYellow to-cskYellow-dark opacity-90 z-0"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_25px_25px,rgba(255,255,255,0.1)_2%,transparent_0%),radial-gradient(circle_at_75px_75px,rgba(255,255,255,0.1)_2%,transparent_0%)] bg-[length:100px_100px] z-0"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col items-center mb-12">
+        <div class="inline-block bg-cskYellow/20 rounded-full px-4 py-1 mb-2 border border-cskYellow/30">
+          <span class="text-sm font-medium text-cskBlue">MATCH SCHEDULE</span>
+        </div>
+        <h2 class="text-3xl font-bold text-cskBlue">UPCOMING <span class="text-cskBlue font-extrabold">FIXTURES</span></h2>
+      </div>
+      
+      <div class="flex justify-center mb-8 bg-none">
+        <div class="inline-flex rounded-xl overflow-hidden bg-none">
+          <button class="fixtures-tab active bg-cskYellow text-cskBlue px-6 py-3 font-semibold border-2 border-cskYellow" data-tab="upcoming">Upcoming</button>
+          <button class="fixtures-tab bg-cskBlue text-white px-6 py-3 font-semibold border-2 border-cskYellow border-l-0" data-tab="completed">Completed</button>
+          <button class="fixtures-tab bg-cskBlue text-white px-6 py-3 font-semibold border-2 border-cskYellow border-l-0" data-tab="all">All Matches</button>
+        </div>
+      </div>
+      
+      <div class="bg-cskBlue rounded-xl p-6 shadow-2xl">
+        <!-- Upcoming Fixtures -->
+        <div class="fixtures-content active" id="upcoming-content">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[700px]">
+              <thead>
+                <tr>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Date</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Match</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Venue</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Time</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Status</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="animate-fade-in hover:bg-cskYellow/10 transition-colors">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">15</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK" class="w-full h-full object-contain">
+                      </div>
+                      <span>CSK vs Mumbai Indians</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>MA Chidambaram Stadium, Chennai</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-clock text-cskYellow mr-2"></i>
+                      <span>7:30 PM IST</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cskYellow/20 text-cskYellow">Upcoming</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Buy Tickets</button>
+                  </td>
+                </tr>
+                <tr class="animate-fade-in hover:bg-cskYellow/10 transition-colors" style="animation-delay: 0.1s;">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">20</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://www.delhicapitals.in/static-assets/images/teams/wpl/3513.png?v=1.84" alt="RCB" class="w-full h-full object-contain">
+                      </div>
+                      <span>Royal Challengers Bangalore vs CSK</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>M. Chinnaswamy Stadium, Bangalore</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-clock text-cskYellow mr-2"></i>
+                      <span>7:30 PM IST</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cskYellow/20 text-cskYellow">Upcoming</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Buy Tickets</button>
+                  </td>
+                </tr>
+                <tr class="animate-fade-in hover:bg-cskYellow/10 transition-colors" style="animation-delay: 0.2s;">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">25</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK" class="w-full h-full object-contain">
+                      </div>
+                      <span>CSK vs Kolkata Knight Riders</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>MA Chidambaram Stadium, Chennai</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-clock text-cskYellow mr-2"></i>
+                      <span>3:30 PM IST</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cskYellow/20 text-cskYellow">Upcoming</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Buy Tickets</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <!-- Completed Fixtures -->
+        <div class="fixtures-content hidden" id="completed-content">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[700px]">
+              <thead>
+                <tr>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Date</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Match</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Venue</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Result</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Status</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-cskYellow/10 transition-colors">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">05</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK" class="w-full h-full object-contain">
+                      </div>
+                      <span>CSK vs Delhi Capitals</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>MA Chidambaram Stadium, Chennai</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="font-bold text-lg text-white">
+                      CSK won by 27 runs
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-500/20 text-green-400">Completed</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Highlights</button>
+                  </td>
+                </tr>
+                <tr class="hover:bg-cskYellow/10 transition-colors">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">01</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://documents.iplt20.com/ipl/SRH/Logos/Logooutline/SRHoutline.png" alt="SRH" class="w-full h-full object-contain">
+                      </div>
+                      <span>Sunrisers Hyderabad vs CSK</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>Rajiv Gandhi Stadium, Hyderabad</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="font-bold text-lg text-white">
+                      CSK won by 5 wickets
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-500/20 text-green-400">Completed</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Highlights</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <!-- All Fixtures -->
+        <div class="fixtures-content hidden" id="all-content">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[700px]">
+              <thead>
+                <tr>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Date</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Match</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Venue</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Time/Result</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Status</th>
+                  <th class="p-4 text-left text-cskYellow border-b border-cskYellow">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Upcoming Matches -->
+                <tr class="hover:bg-cskYellow/10 transition-colors">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">15</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK" class="w-full h-full object-contain">
+                      </div>
+                      <span>CSK vs Mumbai Indians</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>MA Chidambaram Stadium, Chennai</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-clock text-cskYellow mr-2"></i>
+                      <span>7:30 PM IST</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-cskYellow/20 text-cskYellow">Upcoming</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Buy Tickets</button>
+                  </td>
+                </tr>
+                
+                <!-- Completed Matches -->
+                <tr class="hover:bg-cskYellow/10 transition-colors">
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex flex-col items-center">
+                      <span class="text-xl font-bold text-cskYellow">05</span>
+                      <span class="text-sm text-gray-300">APR</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <div class="w-10 h-10 rounded-full bg-cskYellow-dark p-1 mr-3 border-2 border-white flex items-center justify-center overflow-hidden">
+                        <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK" class="w-full h-full object-contain">
+                      </div>
+                      <span>CSK vs Delhi Capitals</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                      <i class="fas fa-map-marker-alt text-cskYellow mr-2"></i>
+                      <span>MA Chidambaram Stadium, Chennai</span>
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <div class="font-bold text-lg text-white">
+                      CSK won by 27 runs
+                    </div>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-500/20 text-green-400">Completed</span>
+                  </td>
+                  <td class="p-4 border-b border-gray-700">
+                    <button class="bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue text-sm font-bold py-2 px-4 rounded-full shine-effect transition-transform hover:scale-105">Highlights</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Points Table Section -->
+  <section id="points" class="py-16 jersey-pattern-dark">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center mb-12">
+        <div class="inline-block bg-cskYellow/20 rounded-full px-4 py-1 mb-2 border border-cskYellow/30">
+          <span class="text-sm font-medium text-cskYellow">TEAM STANDINGS</span>
+        </div>
+        <h2 class="text-3xl font-bold text-white">IPL 2025 <span class="gradient-text">POINTS TABLE</span></h2>
+      </div>
+      
+      <div class="bg-cskBlue rounded-xl p-6 shadow-2xl animate-fade-in overflow-x-auto">
+        <table class="w-full min-w-[800px]">
+          <thead>
+            <tr>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                Team
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                P
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                W
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                L
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                NR
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                NRR
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                Form
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+              <th class="p-4 text-center text-cskYellow border-b-2 border-cskYellow relative">
+                Points
+                <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cskYellow via-cskYellow-dark to-cskYellow"></div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- CSK Row -->
+            <tr class="bg-cskYellow/15 animate-slide-up-fade-in" style="animation-delay: 0.1s;">
+              <td class="p-4 border-b border-gray-700">
+                <div class="flex items-center">
+                  <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">1</div>
+                  <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                    <img src="https://www.chennaisuperkings.com/assets/images/csk_logo_withOutGradient.png" alt="CSK" class="w-6 h-6 object-contain">
+                  </div>
+                  <div class="font-semibold">Chennai Super Kings</div>
+                </div>
+              </td>
+              <td class="p-4 text-center border-b border-gray-700">5</td>
+              <td class="p-4 text-center border-b border-gray-700">4</td>
+              <td class="p-4 text-center border-b border-gray-700">1</td>
+              <td class="p-4 text-center border-b border-gray-700">0</td>
+              <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.254</td>
+              <td class="p-4 text-center border-b border-gray-700">
+                <div class="flex justify-center gap-1">
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                </div>
+              </td>
+              <td class="p-4 text-center border-b border-gray-700 text-xl font-bold text-cskYellow">8</td>
+            </tr>
+            
+            <!-- Other Teams -->
+            <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.2s;">
+              <td class="p-4 border-b border-gray-700">
+                <div class="flex items-center">
+                  <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">2</div>
+                  <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                    <img src="https://documents.iplt20.com/ipl/RR/Logos/Logooutline/RRoutline.png" alt="RR" class="w-6 h-6 object-contain">
+                  </div>
+                  <div class="font-semibold">Rajasthan Royals</div>
+                </div>
+              </td>
+              <td class="p-4 text-center border-b border-gray-700">5</td>
+              <td class="p-4 text-center border-b border-gray-700">4</td>
+              <td class="p-4 text-center border-b border-gray-700">1</td>
+              <td class="p-4 text-center border-b border-gray-700">0</td>
+              <td class="p-4 text-center border-b border-gray-700 text-green-400">+0.866</td>
+              <td class="p-4 text-center border-b border-gray-700">
+                <div class="flex justify-center gap-1">
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                </div>
+              </td>
+              <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">8</td>
+            </tr>
+            
+            <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+              <td class="p-4 border-b border-gray-700">
+                <div class="flex items-center">
+                  <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">3</div>
+                  <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                    <img src="https://documents.iplt20.com/ipl/KKR/Logos/Logooutline/KKRoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                  </div>
+                  <div class="font-semibold">Kolkata Knight Riders</div>
+                </div>
+              </td>
+              <td class="p-4 text-center border-b border-gray-700">5</td>
+              <td class="p-4 text-center border-b border-gray-700">3</td>
+              <td class="p-4 text-center border-b border-gray-700">2</td>
+              <td class="p-4 text-center border-b border-gray-700">0</td>
+              <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+              <td class="p-4 text-center border-b border-gray-700">
+                <div class="flex justify-center gap-1">
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                  <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                </div>
+              </td>
+              <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+            </tr>
+
+            <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">4</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/DC/Logos/LogoOutline/DCoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Delhi Capitals</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+
+              <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">5</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/GT/Logos/Logooutline/GToutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Gujarat Titans</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+
+              <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">6</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/LSG/Logos/Logooutline/LSGoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Lucknow Super Giants</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+
+              <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">7</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/MI/Logos/Logooutline/MIoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Mumbai Indians</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+
+              <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">8</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/PBKS/Logos/Logooutline/PBKSoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Punjab Kings</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+              <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">9</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/RCB/Logos/Logooutline/RCBoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Royal Challengers Bangalore</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+              <tr class="hover:bg-cskYellow/5 transition-colors animate-slide-up-fade-in" style="animation-delay: 0.3s;">
+                <td class="p-4 border-b border-gray-700">
+                  <div class="flex items-center">
+                    <div class="w-6 h-6 rounded-full bg-cskYellow text-cskBlue flex items-center justify-center text-xs font-bold mr-3">10</div>
+                    <div class="w-8 h-8 rounded-full border border-cskYellow mr-3 flex items-center justify-center overflow-hidden">
+                      <img src="https://documents.iplt20.com/ipl/SRH/Logos/Logooutline/SRHoutline.png" alt="KKR" class="w-6 h-6 object-contain">
+                    </div>
+                    <div class="font-semibold">Sunrises Hyderabad</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700">5</td>
+                <td class="p-4 text-center border-b border-gray-700">3</td>
+                <td class="p-4 text-center border-b border-gray-700">2</td>
+                <td class="p-4 text-center border-b border-gray-700">0</td>
+                <td class="p-4 text-center border-b border-gray-700 text-green-400">+1.688</td>
+                <td class="p-4 text-center border-b border-gray-700">
+                  <div class="flex justify-center gap-1">
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                    <div class="w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center font-bold">L</div>
+                    <div class="w-5 h-5 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">W</div>
+                  </div>
+                </td>
+                <td class="p-4 text-center border-b border-gray-700 text-xl font-bold">6</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="players" class="py-16 jersey-pattern">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span class="text-sm font-medium text-blue-900">THE CHAMPIONS</span>
+        </div>
+        <h2 class="section-title text-blue-900">MEET OUR <span class="text-blue-900 font-extrabold">SQUAD</span></h2>
+      </div>
+      
+      <div class="player-filter-buttons">
+        <button class="player-filter-button active" data-filter="all">All Players</button>
+        <button class="player-filter-button" data-filter="batsman">Batsmen</button>
+        <button class="player-filter-button" data-filter="bowler">Bowlers</button>
+        <button class="player-filter-button" data-filter="all-rounder">All-Rounders</button>
+        <button class="player-filter-button" data-filter="wicketkeeper">Wicketkeepers</button>
+      </div>
+      
+      <div class="player-carousel-container">
+        <div class="player-carousel" id="player-carousel">
+    
+          <div class="player-card animate-fade-in" data-role="wicketkeeper">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team1playerImgNoBg_1740743229476.png" alt="MS Dhoni" class="player-image">
+              <div class="player-star">
+                <i class="fas fa-trophy mr-1 text-yellow-500"></i>
+                <span>Star Player</span>
+              </div>
+              <div class="player-number">7</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+                <span>India</span>
+              </div>
+              <h3 class="player-name">MS Dhoni</h3>
+              <p class="player-role">Wicketkeeper</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">250</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Runs</span>
+                  <span class="stat-value">5082</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+          
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team2playerImgNoBg_1740757387930.png" alt="Ravindra Jadeja" class="player-image">
+              <div class="player-star">
+                <i class="fas fa-trophy mr-1 text-yellow-500"></i>
+                <span>Star Player</span>
+              </div>
+              <div class="player-number">8</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+                <span>India</span>
+              </div>
+              <h3 class="player-name">Ravindra Jadeja</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">210</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">132</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+          
+         
+          <div class="player-card animate-fade-in" data-role="batsman">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team4playerImgNoBg_1740745244650.png" alt="Ruturaj Gaikwad" class="player-image">
+              <div class="player-star">
+                <i class="fas fa-star mr-1 text-yellow-500"></i>
+                <span>Rising Star</span>
+              </div>
+              <div class="player-number">31</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+                <span>India</span>
+              </div>
+              <h3 class="player-name">Ruturaj Gaikwad</h3>
+              <p class="player-role">Batsman</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">52</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Runs</span>
+                  <span class="stat-value">1797</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+          
+   
+          <div class="player-card animate-fade-in" data-role="bowler">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team23playerImgNoBg_1740747219849.png" alt="Nathan Ellis" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+                <span>Australia</span>
+              </div>
+              <h3 class="player-name">Nathan Ellis</h3>
+              <p class="player-role">Bowler</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+          
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/211.png" alt="Shivam Dube" class="player-image">
+              <div class="player-number">42</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+                <span>India</span>
+              </div>
+              <h3 class="player-name">Shivam Dube</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">45</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Runs</span>
+                  <span class="stat-value">1250</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+   
+          <div class="player-card animate-fade-in" data-role="wicketkeeper">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2023/601.png" alt="Devon Conway" class="player-image">
+              <div class="player-number">18</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
+                <span>New Zealand</span>
+              </div>
+              <h3 class="player-name">Devon Conway</h3>
+              <p class="player-role">Wicketkeeper</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">58</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">24</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
+
+
+
+          
+        </div>
+       
+        
+        <div class="player-carousel-controls">
+          <button class="player-carousel-arrow" id="player-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="player-carousel-arrow" id="player-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        
+        <div class="player-carousel-dots" id="player-dots">
+       
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Mobile Menu Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const overlay = document.getElementById('overlay');
+      
+      if (mobileMenuButton && mobileMenu && mobileMenuClose && overlay) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.add('open');
+          overlay.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+        
+        mobileMenuClose.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+        
+        overlay.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      // Highlight Carousel Functionality
+      const highlightSlides = document.getElementById('highlight-slides');
+      const highlightDots = document.querySelectorAll('.highlight-dot');
+      const highlightPrev = document.getElementById('highlight-prev');
+      const highlightNext = document.getElementById('highlight-next');
+      
+      if (highlightSlides && highlightDots.length && highlightPrev && highlightNext) {
+        let currentSlide = 0;
+        const totalSlides = highlightDots.length;
+        
+        // Function to update slide position
+        function goToSlide(slideIndex) {
+          if (slideIndex < 0) slideIndex = totalSlides - 1;
+          if (slideIndex >= totalSlides) slideIndex = 0;
+          
+          currentSlide = slideIndex;
+          highlightSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+          
+          // Update active dot
+          highlightDots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+        }
+        
+        // Set up dot click handlers
+        highlightDots.forEach((dot, index) => {
+          dot.addEventListener('click', function() {
+            goToSlide(index);
+          });
+        });
+        
+        // Set up arrow click handlers
+        highlightPrev.addEventListener('click', function() {
+          goToSlide(currentSlide - 1);
+        });
+        
+        highlightNext.addEventListener('click', function() {
+          goToSlide(currentSlide + 1);
+        });
+        
+        // Auto-advance slides every 5 seconds
+        let slideInterval = setInterval(() => {
+          goToSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Pause auto-advance on hover
+        highlightSlides.addEventListener('mouseenter', () => {
+          clearInterval(slideInterval);
+        });
+        
+        highlightSlides.addEventListener('mouseleave', () => {
+          slideInterval = setInterval(() => {
+            goToSlide(currentSlide + 1);
+          }, 5000);
+        });
+      }
+      
+      // Fixtures Tabs Functionality
+      const fixtureTabs = document.querySelectorAll('.fixtures-tab');
+      const fixtureContents = document.querySelectorAll('.fixtures-content');
+      
+      if (fixtureTabs.length && fixtureContents.length) {
+        fixtureTabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            fixtureTabs.forEach(t => t.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Get the tab content to show
+            const tabContentId = `${this.getAttribute('data-tab')}-content`;
+            
+            // Hide all tab contents
+            fixtureContents.forEach(content => {
+              content.classList.remove('active');
+            });
+            
+            // Show the selected tab content
+            document.getElementById(tabContentId).classList.add('active');
+          });
+        });
+      }
+      
+      // Enhanced Player Carousel Functionality
+      const playerCarousel = document.getElementById('player-carousel');
+      const playerPrev = document.getElementById('player-prev');
+      const playerNext = document.getElementById('player-next');
+      const playerCards = document.querySelectorAll('.player-card');
+      const playerDots = document.getElementById('player-dots');
+      
+      if (playerCarousel && playerPrev && playerNext && playerCards.length && playerDots) {
+        const cardWidth = 280; // Width of a player card
+        const gap = 24; // Gap between cards
+        const visibleCards = Math.min(3, playerCards.length);
+        let currentPosition = 0;
+        const maxPosition = Math.max(0, playerCards.length - visibleCards);
+        
+        // Create dots for player carousel
+        for (let i = 0; i <= maxPosition; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('player-carousel-dot');
+          if (i === 0) dot.classList.add('active');
+          dot.setAttribute('data-position', i);
+          playerDots.appendChild(dot);
+        }
+        
+        const playerDotElements = document.querySelectorAll('.player-carousel-dot');
+        
+        // Function to update carousel position
+        function updatePlayerCarousel() {
+          playerCarousel.style.transform = `translateX(-${currentPosition * (cardWidth + gap)}px)`;
+          
+          // Update active dot
+          playerDotElements.forEach((dot, index) => {
+            if (index === currentPosition) {
+              dot.classList.add('active');
+            } else {
+              dot.classList.remove('active');
+            }
+          });
+          
+          // Enable/disable arrows
+          if (currentPosition === 0) {
+            playerPrev.style.opacity = '0.5';
+            playerPrev.style.cursor = 'not-allowed';
+          } else {
+            playerPrev.style.opacity = '1';
+            playerPrev.style.cursor = 'pointer';
+          }
+          
+          if (currentPosition === maxPosition) {
+            playerNext.style.opacity = '0.5';
+            playerNext.style.cursor = 'not-allowed';
+          } else {
+            playerNext.style.opacity = '1';
+            playerNext.style.cursor = 'pointer';
+          }
+        }
+        
+        // Set up arrow click handlers
+        playerPrev.addEventListener('click', function() {
+          if (currentPosition > 0) {
+            currentPosition--;
+            updatePlayerCarousel();
+          }
+        });
+        
+        playerNext.addEventListener('click', function() {
+          if (currentPosition < maxPosition) {
+            currentPosition++;
+            updatePlayerCarousel();
+          }
+        });
+        
+        // Set up dot click handlers
+        playerDotElements.forEach(dot => {
+          dot.addEventListener('click', function() {
+            currentPosition = parseInt(this.getAttribute('data-position'));
+            updatePlayerCarousel();
+          });
+        });
+        
+        // Player filter functionality
+        const filterButtons = document.querySelectorAll('.player-filter-button');
+        
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => {
+              btn.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Filter player cards with animation
+            playerCards.forEach(card => {
+              const role = card.getAttribute('data-role');
+              card.classList.remove('animate-fade-in');
+              
+              if (filter === 'all' || role === filter) {
+                setTimeout(() => {
+                  card.style.display = 'block';
+                  card.classList.add('animate-fade-in');
+                }, 50);
+              } else {
+                card.style.display = 'none';
+              }
+            });
+            
+            // Reset carousel position
+            currentPosition = 0;
+            updatePlayerCarousel();
+          });
+        });
+        
+        // Initialize carousel
+        updatePlayerCarousel();
+        
+        // Add touch swipe functionality for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        playerCarousel.addEventListener('touchstart', e => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        
+        playerCarousel.addEventListener('touchend', e => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        }, false);
+        
+        function handleSwipe() {
+          if (touchEndX < touchStartX - 50) {
+            // Swipe left
+            if (currentPosition < maxPosition) {
+              currentPosition++;
+              updatePlayerCarousel();
+            }
+          } else if (touchEndX > touchStartX + 50) {
+            // Swipe right
+            if (currentPosition > 0) {
+              currentPosition--;
+              updatePlayerCarousel();
+            }
+          }
+        }
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', e => {
+          if (e.key === 'ArrowLeft') {
+            if (currentPosition > 0) {
+              currentPosition--;
+              updatePlayerCarousel();
+            }
+          } else if (e.key === 'ArrowRight') {
+            if (currentPosition < maxPosition) {
+              currentPosition++;
+              updatePlayerCarousel();
+            }
+          }
+        });
+        
+        // Add hover effect to show player details
+        playerCards.forEach(card => {
+          card.addEventListener('mouseenter', function() {
+            this.style.zIndex = '10';
+          });
+          
+          card.addEventListener('mouseleave', function() {
+            this.style.zIndex = '1';
+          });
+        });
+      }
+      
+      // Add scroll animations
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.section-header, .testimonial-card, .sponsor-card');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementPosition < windowHeight - 100) {
+            if (!element.classList.contains('animate-fade-in')) {
+              element.classList.add('animate-fade-in');
+            }
+          }
+        });
+      };
+      
+      // Run on scroll
+      window.addEventListener('scroll', animateOnScroll);
+      
+      // Run once on load
+      animateOnScroll();
+    });
+  </script>
+
+  <!-- Merchandise Section -->
+  <section id="merchandise" class="py-16 bg-cskBlue">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center mb-12">
+        <div class="inline-block bg-cskYellow/20 rounded-full px-4 py-1 mb-2 border border-cskYellow/30">
+          <span class="text-sm font-medium text-cskYellow">OFFICIAL MERCHANDISE</span>
+        </div>
+        <h2 class="text-3xl font-bold text-white">SHOP <span class="gradient-text">CSK GEAR</span></h2>
+        <p class="text-gray-300 max-w-2xl text-center mt-4">Show your support for the Yellow Army with our official merchandise collection.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Jersey Card -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cskYellow/30 hover:shadow-2xl hover:-translate-y-2 group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://www.chennaisuperkings.com/shop/_next/image?url=https%3A%2F%2Fstore.chennaisuperkings.com%2F%2Fmedia%2Fcatalog%2Fproduct%2F%2Fc%2Fs%2Fcsk_long_sleeve_plain_front_.png&w=1920&q=100" alt="CSK Home Jersey" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-3 right-3 bg-cskYellow text-cskBlue text-xs font-bold px-2 py-1 rounded-full">NEW</div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-white mb-2">CSK Home Jersey 2025</h3>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-cskYellow font-bold text-xl">₹1,999</span>
+              <div class="flex">
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star-half-alt text-cskYellow"></i>
+              </div>
+            </div>
+            <button class="w-full bg-cskYellow text-cskBlue font-bold py-2 rounded-lg transition-all duration-300 hover:bg-cskYellow-dark shine-effect">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        
+        <!-- Cap Card -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cskYellow/30 hover:shadow-2xl hover:-translate-y-2 group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://www.chennaisuperkings.com/shop/_next/image?url=https%3A%2F%2Fstore.chennaisuperkings.com%2F%2Fmedia%2Fcatalog%2Fproduct%2F%2F8%2F9%2F8905570018580_1_1.jpg&w=1920&q=100" alt="CSK Cap" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">SALE</div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-white mb-2">CSK Official Bottle</h3>
+            <div class="flex justify-between items-center mb-3">
+              <div>
+                <span class="text-cskYellow font-bold text-xl">₹799</span>
+                <span class="text-gray-400 text-sm line-through ml-2">₹999</span>
+              </div>
+              <div class="flex">
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+              </div>
+            </div>
+            <button class="w-full bg-cskYellow text-cskBlue font-bold py-2 rounded-lg transition-all duration-300 hover:bg-cskYellow-dark shine-effect">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        
+        <!-- Backpack Card -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cskYellow/30 hover:shadow-2xl hover:-translate-y-2 group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://www.chennaisuperkings.com/shop/_next/image?url=https%3A%2F%2Fstore.chennaisuperkings.com%2F%2Fmedia%2Fcatalog%2Fproduct%2F%2Fp%2Fr%2Fprsgb-csk-01_1.jpg&w=1920&q=100" alt="CSK Backpack" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-white mb-2">CSK Premium Backpack</h3>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-cskYellow font-bold text-xl">₹1,499</span>
+              <div class="flex">
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="far fa-star text-cskYellow"></i>
+              </div>
+            </div>
+            <button class="w-full bg-cskYellow text-cskBlue font-bold py-2 rounded-lg transition-all duration-300 hover:bg-cskYellow-dark shine-effect">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        
+        <!-- Signed Bat Card -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-cskYellow/30 hover:shadow-2xl hover:-translate-y-2 group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://www.chennaisuperkings.com/shop/_next/image?url=https%3A%2F%2Fstore.chennaisuperkings.com%2F%2Fmedia%2Fcatalog%2Fproduct%2F%2Fr%2Fi%2Frich118_1.jpg&w=1920&q=75" alt="CSK Signed Bat" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute top-3 right-3 bg-cskBlue text-cskYellow text-xs font-bold px-2 py-1 rounded-full">LIMITED</div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-white mb-2">CSK Team Signed Bat</h3>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-cskYellow font-bold text-xl">₹9,999</span>
+              <div class="flex">
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star text-cskYellow"></i>
+                <i class="fas fa-star-half-alt text-cskYellow"></i>
+              </div>
+            </div>
+            <button class="w-full bg-cskYellow text-cskBlue font-bold py-2 rounded-lg transition-all duration-300 hover:bg-cskYellow-dark shine-effect">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-center mt-10">
+        <a href="#" class="inline-block bg-transparent border-2 border-cskYellow text-cskYellow font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-cskYellow/20 hover:scale-105 group">
+          VIEW ALL MERCHANDISE <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors Section -->
+  <section id="sponsors" class="py-16 jersey-pattern">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center mb-12">
+        <div class="inline-block bg-cskYellow/20 rounded-full px-4 py-1 mb-2 border border-cskYellow/30">
+          <span class="text-sm font-medium text-cskBlue">OUR PARTNERS</span>
+        </div>
+        <h2 class="text-3xl font-bold text-cskBlue">OFFICIAL <span class="text-cskBlue font-extrabold">SPONSORS</span></h2>
+      </div>
+      
+      <div class="mb-12">
+        <h3 class="text-xl font-semibold text-cskBlue text-center mb-6">TITLE SPONSOR</h3>
+        <div class="flex justify-center">
+          <div class="w-64 h-32 bg-white rounded-lg p-4 shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/ETIHADLOGO.png" alt="Title Sponsor" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-12">
+        <h3 class="text-xl font-semibold text-cskBlue text-center mb-6">PRINCIPAL SPONSORS</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="h-24 bg-white rounded-lg p-4 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPON_PART/IMAGE/SPON_PART_1739862841853_b333e9_1739862841853.png" alt="Principal Sponsor 1" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-24 bg-white rounded-lg p-4 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/GULF_PP_03_2023.png" alt="Principal Sponsor 2" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-24 bg-white rounded-lg p-4 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/BE_MP_05_2023.png" alt="Principal Sponsor 3" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-xl font-semibold text-cskBlue text-center mb-6">OFFICIAL PARTNERS</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div class="h-20 bg-white rounded-lg p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/Rayzon.png" alt="Official Partner 1" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-20 bg-white rounded-lg p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/AP_MP_07_2023.png" alt="Official Partner 2" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-20 bg-white rounded-lg p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/equ.jpeg" alt="Official Partner 3" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-20 bg-white rounded-lg p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/jsw-paints-logo-new.png" alt="Official Partner 4" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-20 bg-white rounded-lg p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/VISION_MP_09_2023.png" alt="Official Partner 5" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+          <div class="h-20 bg-white rounded-lg p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-cskYellow border border-cskYellow/10">
+            <div class="flex h-full items-center justify-center">
+              <img src="https://gallery.chennaisuperkings.com/PROD/SPN_PART/CC_MP_12_2023.png" alt="Official Partner 6" class="max-h-full max-w-full object-contain">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="relative bg-cskBlue py-16 border-t-3 border-cskYellow">
+    <!-- Footer Wave -->
+    <div class="footer-wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    
+    <!-- Logo Badge -->
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+      <div class="bg-cskBlue rounded-full p-4 border-4 border-cskYellow shadow-xl">
+        <img src="https://documents.iplt20.com/ipl/CSK/logos/Logooutline/CSKoutline.png" height="40" width="70" alt="CSK Logo">
+      </div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- Footer Header -->
+      <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+        <div class="flex items-center mb-6 md:mb-0">
+          <img src="https://documents.iplt20.com/ipl/CSK/logos/Logooutline/CSKoutline.png" alt="CSK Logo" class="w-16 h-16 mr-4 animate-float">
+          <div>
+            <h3 class="text-2xl font-bold gradient-text mb-1">Chennai Super Kings</h3>
+            <p class="text-gray-300">Whistle Podu! 5-Time IPL Champions</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 bg-cskBlue-light text-gray-300 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-cskYellow hover:text-cskBlue hover:scale-110 group">
+            <i class="fab fa-facebook-f group-hover:animate-bounce"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-cskBlue-light text-gray-300 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-cskYellow hover:text-cskBlue hover:scale-110 group">
+            <i class="fab fa-twitter group-hover:animate-bounce"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-cskBlue-light text-gray-300 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-cskYellow hover:text-cskBlue hover:scale-110 group">
+            <i class="fab fa-instagram group-hover:animate-bounce"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-cskBlue-light text-gray-300 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-cskYellow hover:text-cskBlue hover:scale-110 group">
+            <i class="fab fa-youtube group-hover:animate-bounce"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About CSK -->
+        <div class="animate-fade-in" style="animation-delay: 0.1s;">
+          <h3 class="text-lg font-bold text-cskYellow mb-4 flex items-center">
+            <i class="fas fa-info-circle mr-2"></i> About CSK
+          </h3>
+          <p class="text-gray-300 mb-4">
+            Chennai Super Kings is a franchise cricket team based in Chennai, Tamil Nadu. The team plays in the Indian Premier League (IPL) and has won the tournament five times.
+          </p>
+          <div class="flex items-center">
+            <div class="flex -space-x-1">
+                <div class="w-5 h-5 rounded-full border border-cskYellow bg-cskBlue flex items-center justify-center">
+                  <i class="fas fa-trophy text-xs text-cskYellow"></i>
+                </div>
+                <div class="w-5 h-5 rounded-full border border-cskYellow bg-cskBlue flex items-center justify-center">
+                  <i class="fas fa-trophy text-xs text-cskYellow"></i>
+                </div>
+                <div class="w-5 h-5 rounded-full border border-cskYellow bg-cskBlue flex items-center justify-center">
+                  <i class="fas fa-trophy text-xs text-cskYellow"></i>
+                </div>
+                <div class="w-5 h-5 rounded-full border border-cskYellow bg-cskBlue flex items-center justify-center">
+                  <i class="fas fa-trophy text-xs text-cskYellow"></i>
+                </div>
+                <div class="w-5 h-5 rounded-full border border-cskYellow bg-cskBlue flex items-center justify-center">
+                  <i class="fas fa-trophy text-xs text-cskYellow"></i>
+                </div>
+              </div>
+            <span class="ml-4 text-cskYellow font-bold">5 IPL Titles</span>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="animate-fade-in" style="animation-delay: 0.2s;">
+          <h3 class="text-lg font-bold text-cskYellow mb-4 flex items-center">
+            <i class="fas fa-link mr-2"></i> Quick Links
+          </h3>
+          <ul class="grid grid-cols-2 gap-2">
+            <li><a href="#home" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Home</a></li>
+            <li><a href="#fixtures" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Fixtures</a></li>
+            <li><a href="#points" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Points Table</a></li>
+            <li><a href="#players" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Players</a></li>
+            <li><a href="#merchandise" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Merchandise</a></li>
+            <li><a href="#contact" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Contact</a></li>
+            <li><a href="#" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> Fan Zone</a></li>
+            <li><a href="#" class="flex items-center text-gray-300 hover:text-cskYellow transition-colors duration-300 group"><i class="fas fa-chevron-right text-cskYellow mr-2 group-hover:translate-x-1 transition-transform"></i> News</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Us -->
+        <div class="animate-fade-in" style="animation-delay: 0.3s;">
+          <h3 class="text-lg font-bold text-cskYellow mb-4 flex items-center">
+            <i class="fas fa-envelope mr-2"></i> Contact Us
+          </h3>
+          <address class="not-italic space-y-3 text-gray-300">
+            <p class="flex items-center"><i class="fas fa-map-marker-alt text-cskYellow mr-3 w-5 text-center"></i> MA Chidambaram Stadium, Chepauk, Chennai, Tamil Nadu, India</p>
+            <p class="flex items-center"><i class="fas fa-envelope text-cskYellow mr-3 w-5 text-center"></i> info@chennaiipl.com</p>
+            <p class="flex items-center"><i class="fas fa-phone text-cskYellow mr-3 w-5 text-center"></i> +91 44 1234 5678</p>
+            <p class="flex items-center"><i class="fas fa-clock text-cskYellow mr-3 w-5 text-center"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+          </address>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="animate-fade-in" style="animation-delay: 0.4s;">
+          <h3 class="text-lg font-bold text-cskYellow mb-4 flex items-center">
+            <i class="fas fa-paper-plane mr-2"></i> Newsletter
+          </h3>
+          <p class="text-gray-300 mb-4">
+            Subscribe to our newsletter for the latest updates, exclusive content, and special offers.
+          </p>
+          <form class="space-y-3">
+            <div class="relative">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                class="w-full py-3 px-4 rounded-md border border-cskYellow bg-cskBlue-light/30 text-white placeholder:text-gray-400 focus:outline-none focus:border-cskYellow focus:ring-2 focus:ring-cskYellow/30 pr-10"
+              />
+              <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-cskYellow">
+                <i class="fas fa-envelope"></i>
+              </div>
+            </div>
+            <button 
+              type="submit" 
+              class="w-full relative overflow-hidden bg-gradient-to-r from-cskYellow to-cskYellow-dark text-cskBlue font-bold py-3 px-4 rounded-md transition-transform duration-300 hover:scale-105 shine-effect flex items-center justify-center"
+            >
+              <i class="fas fa-bell mr-2"></i> Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="mt-12 pt-6 border-t border-cskYellow/30 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">© <script>document.write(new Date().getFullYear())</script> Chennai Super Kings. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-400 hover:text-cskYellow transition-colors duration-300">Privacy Policy</a>
+          <span class="text-gray-600">|</span>
+          <a href="#" class="text-gray-400 hover:text-cskYellow transition-colors duration-300">Terms of Service</a>
+          <span class="text-gray-600">|</span>
+          <a href="#" class="text-gray-400 hover:text-cskYellow transition-colors duration-300">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+   <!-- JavaScript to Play Video on Click -->
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const highlightSections = document.querySelectorAll(".video-container");
+  
+      highlightSections.forEach((section) => {
+        const thumbnail = section.querySelector(".video-thumbnail");
+        const iframe = section.querySelector("iframe");
+        const watchButton = section.closest(".relative").querySelector(".watch-btn");
+  
+        function playVideo() {
+          if (iframe && thumbnail) {
+            thumbnail.style.display = "none"; // Hide the thumbnail
+            iframe.src = iframe.dataset.video; // Set video URL
+            iframe.classList.remove("hidden"); // Show the iframe
+          }
+        }
+  
+        // Add event listener for thumbnail click
+        if (thumbnail) {
+          thumbnail.addEventListener("click", playVideo);
+        }
+  
+        // Add event listener for button click
+        if (watchButton) {
+          watchButton.addEventListener("click", playVideo);
+        }
+      });
+    });
+  </script>
+<script>
+  // Add scroll progress functionality
+  window.addEventListener('scroll', function() {
+    const scrollProgress = document.getElementById('scroll-progress');
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (window.pageYOffset / totalHeight) * 100;
+    scrollProgress.style.width = progress + '%';
+    
+    // Add shadow on scroll
+    const header = document.querySelector('header');
+    if (window.scrollY > 10) {
+      header.classList.add('shadow-lg');
+    } else {
+      header.classList.remove('shadow-lg');
+    }
+  });
+  
+  // Add active class to current section in navigation
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  window.addEventListener('scroll', function() {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (window.pageYOffset >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('text-cskBlue-dark', 'font-bold');
+      const href = link.getAttribute('href').substring(1);
+      
+      if (href === current) {
+        link.classList.add('text-cskBlue-dark', 'font-bold');
+      }
+    });
+  });
+  </script>
+  <script>
+    // Mobile Menu Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+      const overlay = document.getElementById('overlay');
+      
+      if (mobileMenuButton && mobileMenu && mobileMenuClose && overlay) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.remove('translate-x-full');
+          overlay.classList.remove('opacity-0', 'pointer-events-none');
+          document.body.style.overflow = 'hidden';
+        });
+        
+        mobileMenuClose.addEventListener('click', function() {
+          mobileMenu.classList.add('translate-x-full');
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+          document.body.style.overflow = '';
+        });
+        
+        overlay.addEventListener('click', function() {
+          mobileMenu.classList.add('translate-x-full');
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      // Hero Particles
+      const heroParticles = document.getElementById('hero-particles');
+      if (heroParticles) {
+        for (let i = 0; i < 30; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('bg-cskYellow-light', 'rounded-full', 'opacity-0', 'absolute');
+          
+          // Random size
+          const size = Math.random() * 6 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          
+          // Random position
+          const posX = Math.random() * 100;
+          const posY = Math.random() * 100;
+          particle.style.left = `${posX}%`;
+          particle.style.top = `${posY}%`;
+          
+          // Random animation
+          const delay = Math.random() * 10;
+          particle.style.animation = `particleFloat 15s linear infinite`;
+          particle.style.animationDelay = `${delay}s`;
+          
+          // Random direction
+          const direction = Math.random() > 0.5 ? 1 : -1;
+          particle.style.setProperty('--particle-direction', direction);
+          
+          heroParticles.appendChild(particle);
+        }
+      }
+      
+      // Highlight Carousel Functionality
+      const highlightSlides = document.getElementById('highlight-slides');
+      const highlightDots = document.querySelectorAll('.highlight-dot');
+      const highlightPrev = document.getElementById('highlight-prev');
+      const highlightNext = document.getElementById('highlight-next');
+      
+      if (highlightSlides && highlightDots.length && highlightPrev && highlightNext) {
+        let currentSlide = 0;
+        const totalSlides = highlightDots.length;
+        
+        // Function to update slide position
+        function goToSlide(slideIndex) {
+          if (slideIndex < 0) slideIndex = totalSlides - 1;
+          if (slideIndex >= totalSlides) slideIndex = 0;
+          
+          currentSlide = slideIndex;
+          highlightSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+          
+          // Update active dot
+          highlightDots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add('active', 'bg-cskYellow', 'w-12');
+              dot.classList.remove('bg-cskYellow/30');
+            } else {
+              dot.classList.remove('active', 'bg-cskYellow', 'w-12');
+              dot.classList.add('bg-cskYellow/30');
+            }
+          });
+        }
+        
+        // Set up dot click handlers
+        highlightDots.forEach((dot, index) => {
+          dot.addEventListener('click', function() {
+            goToSlide(index);
+          });
+        });
+        
+        // Set up arrow click handlers
+        highlightPrev.addEventListener('click', function() {
+          goToSlide(currentSlide - 1);
+        });
+        
+        highlightNext.addEventListener('click', function() {
+          goToSlide(currentSlide + 1);
+        });
+        
+        // Auto-advance slides every 5 seconds
+        let slideInterval = setInterval(() => {
+          goToSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Pause auto-advance on hover
+        highlightSlides.addEventListener('mouseenter', () => {
+          clearInterval(slideInterval);
+        });
+        
+        highlightSlides.addEventListener('mouseleave', () => {
+          slideInterval = setInterval(() => {
+            goToSlide(currentSlide + 1);
+          }, 5000);
+        });
+      }
+      
+      // Fixtures Tabs Functionality
+      const fixtureTabs = document.querySelectorAll('.fixtures-tab');
+      const fixtureContents = document.querySelectorAll('.fixtures-content');
+      
+      if (fixtureTabs.length && fixtureContents.length) {
+        fixtureTabs.forEach(tab => {
+          tab.addEventListener('click', function() {
+            // Remove active class from all tabs
+            fixtureTabs.forEach(t => {
+              t.classList.remove('active', 'bg-cskYellow', 'text-cskBlue');
+              t.classList.add('bg-cskBlue', 'text-white');
+            });
+            
+            // Add active class to clicked tab
+            this.classList.add('active', 'bg-cskYellow', 'text-cskBlue');
+            this.classList.remove('bg-cskBlue', 'text-white');
+            
+            // Get the tab content to show
+            const tabContentId = `${this.getAttribute('data-tab')}-content`;
+            
+            // Hide all tab contents
+            fixtureContents.forEach(content => {
+              content.classList.add('hidden');
+              content.classList.remove('active');
+            });
+            
+            // Show the selected tab content
+            document.getElementById(tabContentId).classList.remove('hidden');
+            document.getElementById(tabContentId).classList.add('active');
+          });
+        });
+      }
+      
+      // Player Carousel Functionality
+      const playerCarousel = document.getElementById('player-carousel');
+      const playerPrev = document.getElementById('player-prev');
+      const playerNext = document.getElementById('player-next');
+      const playerCards = document.querySelectorAll('.player-card-container');
+      const playerDots = document.getElementById('player-dots');
+      
+      if (playerCarousel && playerPrev && playerNext && playerCards.length && playerDots) {
+        const cardWidth = 280; // Width of a player card
+        const gap = 24; // Gap between cards
+        const visibleCards = Math.min(3, playerCards.length);
+        let currentPosition = 0;
+        const maxPosition = Math.max(0, playerCards.length - visibleCards);
+        
+        // Create dots for player carousel
+        for (let i = 0; i <= maxPosition; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('w-2.5', 'h-2.5', 'rounded-full', 'bg-cskYellow/30', 'cursor-pointer', 'transition-all', 'duration-300');
+          if (i === 0) {
+            dot.classList.add('active', 'bg-cskYellow', 'scale-125');
+          }
+          dot.setAttribute('data-position', i);
+          playerDots.appendChild(dot);
+        }
+        
+        const playerDotElements = document.querySelectorAll('#player-dots div');
+        
+        // Function to update carousel position
+        function updatePlayerCarousel() {
+          playerCarousel.style.transform = `translateX(-${currentPosition * (cardWidth + gap)}px)`;
+          
+          // Update active dot
+          playerDotElements.forEach((dot, index) => {
+            if (index === currentPosition) {
+              dot.classList.add('active', 'bg-cskYellow', 'scale-125');
+              dot.classList.remove('bg-cskYellow/30');
+            } else {
+              dot.classList.remove('active', 'bg-cskYellow', 'scale-125');
+              dot.classList.add('bg-cskYellow/30');
+            }
+          });
+          
+          // Enable/disable arrows
+          if (currentPosition === 0) {
+            playerPrev.style.opacity = '0.5';
+            playerPrev.style.cursor = 'not-allowed';
+          } else {
+            playerPrev.style.opacity = '1';
+            playerPrev.style.cursor = 'pointer';
+          }
+          
+          if (currentPosition === maxPosition) {
+            playerNext.style.opacity = '0.5';
+            playerNext.style.cursor = 'not-allowed';
+          } else {
+            playerNext.style.opacity = '1';
+            playerNext.style.cursor = 'pointer';
+          }
+        }
+        
+        // Set up arrow click handlers
+        playerPrev.addEventListener('click', function() {
+          if (currentPosition > 0) {
+            currentPosition--;
+            updatePlayerCarousel();
+          }
+        });
+        
+        playerNext.addEventListener('click', function() {
+          if (currentPosition < maxPosition) {
+            currentPosition++;
+            updatePlayerCarousel();
+          }
+        });
+        
+        // Set up dot click handlers
+        playerDotElements.forEach(dot => {
+          dot.addEventListener('click', function() {
+            currentPosition = parseInt(this.getAttribute('data-position'));
+            updatePlayerCarousel();
+          });
+        });
+        
+        // Player filter functionality
+        const filterButtons = document.querySelectorAll('.player-filter-button');
+        
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => {
+              btn.classList.remove('active', 'bg-cskYellow', 'text-cskBlue');
+              btn.classList.add('bg-cskBlue', 'text-white', 'border-2', 'border-cskYellow', 'hover:bg-cskYellow/20');
+            });
+            this.classList.add('active', 'bg-cskYellow', 'text-cskBlue');
+            this.classList.remove('bg-cskBlue', 'text-white', 'border-2', 'border-cskYellow', 'hover:bg-cskYellow/20');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Filter player cards with animation
+            playerCards.forEach(card => {
+              const role = card.getAttribute('data-role');
+              card.classList.remove('animate-fade-in');
+              
+              if (filter === 'all' || role === filter) {
+                setTimeout(() => {
+                  card.style.display = 'block';
+                  card.classList.add('animate-fade-in');
+                }, 50);
+              } else {
+                card.style.display = 'none';
+              }
+            });
+            
+            // Reset carousel position
+            currentPosition = 0;
+            updatePlayerCarousel();
+          });
+        });
+        
+        // Initialize carousel
+        updatePlayerCarousel();
+        
+        // Add touch swipe functionality for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        playerCarousel.addEventListener('touchstart', e => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        
+        playerCarousel.addEventListener('touchend', e => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        }, false);
+        
+        function handleSwipe() {
+          if (touchEndX < touchStartX - 50) {
+            // Swipe left
+            if (currentPosition < maxPosition) {
+              currentPosition++;
+              updatePlayerCarousel();
+            }
+          } else if (touchEndX > touchStartX + 50) {
+            // Swipe right
+            if (currentPosition > 0) {
+              currentPosition--;
+              updatePlayerCarousel();
+            }
+          }
+        }
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          // Close mobile menu if open
+          if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.add('translate-x-full');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+          }
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Add scroll animations
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.section-header, .points-table-container, .player-carousel-container');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementPosition < windowHeight - 100) {
+            if (!element.classList.contains('animate-fade-in')) {
+              element.classList.add('animate-fade-in');
+            }
+          }
+        });
+      };
+      
+      // Run on scroll
+      window.addEventListener('scroll', animateOnScroll);
+      
+      // Run once on load
+      animateOnScroll();
+    });
+  </script>
+</body>
+</html>
