@@ -1405,26 +1405,31 @@ background-color: transparent;
     </div>
   </section>
 
+
+  
   <section id="players" class="py-16 jersey-pattern">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">
-          <span class="text-sm font-medium text-blue-900">THE CHAMPIONS</span>
-        </div>
-        <h2 class="section-title text-blue-900">MEET OUR <span class="text-blue-900 font-extrabold">SQUAD</span></h2>
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-8">
+        <span class="text-sm font-medium text-blue-900 uppercase">The Champions</span>
+        <h2 class="text-3xl font-bold text-blue-900 mt-2">Meet Our <span class="text-white">Squad</span></h2>
       </div>
-      
-      <div class="player-filter-buttons">
+  
+      <!-- Player Filter Buttons -->
+      <div class="flex justify-center gap-4 mb-6">
         <button class="player-filter-button active" data-filter="all">All Players</button>
-        <button class="player-filter-button" data-filter="batsman">Batsmen</button>
+        <button class="player-filter-button" data-filter="batsman">Batsman</button>
         <button class="player-filter-button" data-filter="bowler">Bowlers</button>
         <button class="player-filter-button" data-filter="all-rounder">All-Rounders</button>
         <button class="player-filter-button" data-filter="wicketkeeper">Wicketkeepers</button>
       </div>
-      
-      <div class="player-carousel-container">
-        <div class="player-carousel" id="player-carousel">
-    
+  
+      <!-- Player Carousel Container -->
+      <div class="relative">
+        <div id="player-carousel" class="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar">
+          
+          <!-- Player Card -->
+         
           <div class="player-card animate-fade-in" data-role="wicketkeeper">
             <div class="player-image-container">
               <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team1playerImgNoBg_1740743229476.png" alt="MS Dhoni" class="player-image">
@@ -1437,8 +1442,9 @@ background-color: transparent;
             
             <div class="player-info">
               <div class="player-country">
-                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
-                <span>India</span>
+                <!-- <i class="fas fa-shield-alt mr-2 text-yellow-500"></i> -->
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
+
               </div>
               <h3 class="player-name">MS Dhoni</h3>
               <p class="player-role">Wicketkeeper</p>
@@ -1457,7 +1463,40 @@ background-color: transparent;
             
             <div class="player-border"></div>
           </div>
-          
+
+          <div class="player-card animate-fade-in" data-role="batsman">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/188.png" alt="Rahul Tripathi" class="player-image">
+              <div class="player-star">
+                <i class="fas fa-trophy mr-1 text-yellow-500"></i>
+                <!-- <span>Emerging Player</span> -->
+              </div>
+              <div class="player-number">89</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
+            
+              </div>
+              <h3 class="player-name">Rahul Tripathi</h3>
+              <p class="player-role">Batsman</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">50</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Runs</span>
+                  <span class="stat-value">5082</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
           <div class="player-card animate-fade-in" data-role="all-rounder">
             <div class="player-image-container">
               <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team2playerImgNoBg_1740757387930.png" alt="Ravindra Jadeja" class="player-image">
@@ -1470,8 +1509,7 @@ background-color: transparent;
             
             <div class="player-info">
               <div class="player-country">
-                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
-                <span>India</span>
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
               </div>
               <h3 class="player-name">Ravindra Jadeja</h3>
               <p class="player-role">All-Rounder</p>
@@ -1504,8 +1542,8 @@ background-color: transparent;
             
             <div class="player-info">
               <div class="player-country">
-                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
-                <span>India</span>
+             
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
               </div>
               <h3 class="player-name">Ruturaj Gaikwad</h3>
               <p class="player-role">Batsman</p>
@@ -1534,8 +1572,8 @@ background-color: transparent;
             
             <div class="player-info">
               <div class="player-country">
-                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
-                <span>Australia</span>
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg" width="20" alt="Australia Flag"></span>
+
               </div>
               <h3 class="player-name">Nathan Ellis</h3>
               <p class="player-role">Bowler</p>
@@ -1554,7 +1592,218 @@ background-color: transparent;
             
             <div class="player-border"></div>
           </div>
+         
+ 
+          <div class="player-card animate-fade-in" data-role="bowler">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/3106.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+              
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
+              </div>
+              <h3 class="player-name">Anshul Kambhoj</h3>
+              <p class="player-role">Bowler</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
+
           
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2024/724.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+            
+                <span> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg" width="20" alt="New Zealand Flag"></span>
+
+              </div>
+              <h3 class="player-name">Rachin Ravindra</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
+       
+
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/215.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
+              </div>
+              <h3 class="player-name">Deepak Hooda</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
+       
+        
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team25playerImgNoBg_1740753414255.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg" width="20" alt="England Flag"></span>
+
+              </div>
+              <h3 class="player-name">                JAMIE OVERTON</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team5playerImgNoBg_1740757298415.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg" width="20" alt="England Flag"></span>
+
+              </div>
+              <h3 class="player-name">Sam Curran</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+
+          <div class="player-card animate-fade-in" data-role="all-rounder">
+            <div class="player-image-container">
+              <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/45.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
+              </div>
+              <h3 class="player-name">Ravichandra Ashwin</h3>
+              <p class="player-role">All-Rounder</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
+          
+          <div class="player-card animate-fade-in" data-role="bowler">
+            <div class="player-image-container">
+              <img src="https://gallery.chennaisuperkings.com/PROD/TEAM/Team12playerImgNoBg_1740746694018.png" alt="Anshul Kambhog" class="player-image">
+              <div class="player-number">90</div>
+            </div>
+            
+            <div class="player-info">
+              <div class="player-country">
+                <span> 
+                  <img src="data:image/png;base64,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" width="20" alt="Afghanistan Flag">
+                </span>
+                
+                
+              </div>
+              <h3 class="player-name">Noor Ahmed</h3>
+              <p class="player-role">Bowler</p>
+              
+              <div class="player-stats">
+                <div class="stat-box">
+                  <span class="stat-label">Matches</span>
+                  <span class="stat-value">72</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-label">Wickets</span>
+                  <span class="stat-value">85</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="player-border"></div>
+          </div>
           <div class="player-card animate-fade-in" data-role="all-rounder">
             <div class="player-image-container">
               <img src="https://documents.iplt20.com/ipl/IPLHeadshot2025/211.png" alt="Shivam Dube" class="player-image">
@@ -1563,8 +1812,8 @@ background-color: transparent;
             
             <div class="player-info">
               <div class="player-country">
-                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
-                <span>India</span>
+             
+                <span> <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" width="20" alt="India Flag"></span>
               </div>
               <h3 class="player-name">Shivam Dube</h3>
               <p class="player-role">All-Rounder</p>
@@ -1592,8 +1841,8 @@ background-color: transparent;
             
             <div class="player-info">
               <div class="player-country">
-                <i class="fas fa-shield-alt mr-2 text-yellow-500"></i>
-                <span>New Zealand</span>
+                <span>New Zealand <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg" width="20" alt="New Zealand Flag"></span>
+
               </div>
               <h3 class="player-name">Devon Conway</h3>
               <p class="player-role">Wicketkeeper</p>
@@ -1612,14 +1861,9 @@ background-color: transparent;
             
             <div class="player-border"></div>
           </div>
-
-
-
-
           
         </div>
-       
-        
+      
         <div class="player-carousel-controls">
           <button class="player-carousel-arrow" id="player-prev">
             <i class="fas fa-chevron-left"></i>
@@ -1632,320 +1876,70 @@ background-color: transparent;
         <div class="player-carousel-dots" id="player-dots">
        
         </div>
+  
+        </div>
+  
+        <!-- Carousel Controls -->
+        <button id="player-prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow">
+          ❮
+        </button>
+        <button id="player-next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow">
+          ❯
+        </button>
       </div>
     </div>
   </section>
+  
+  <!-- JavaScript -->
   <script>
-    // Mobile Menu Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuClose = document.getElementById('mobile-menu-close');
-      const overlay = document.getElementById('overlay');
-      
-      if (mobileMenuButton && mobileMenu && mobileMenuClose && overlay) {
-        mobileMenuButton.addEventListener('click', function() {
-          mobileMenu.classList.add('open');
-          overlay.classList.add('open');
-          document.body.style.overflow = 'hidden';
-        });
-        
-        mobileMenuClose.addEventListener('click', function() {
-          mobileMenu.classList.remove('open');
-          overlay.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-        
-        overlay.addEventListener('click', function() {
-          mobileMenu.classList.remove('open');
-          overlay.classList.remove('open');
-          document.body.style.overflow = '';
-        });
-      }
-      
-      // Highlight Carousel Functionality
-      const highlightSlides = document.getElementById('highlight-slides');
-      const highlightDots = document.querySelectorAll('.highlight-dot');
-      const highlightPrev = document.getElementById('highlight-prev');
-      const highlightNext = document.getElementById('highlight-next');
-      
-      if (highlightSlides && highlightDots.length && highlightPrev && highlightNext) {
-        let currentSlide = 0;
-        const totalSlides = highlightDots.length;
-        
-        // Function to update slide position
-        function goToSlide(slideIndex) {
-          if (slideIndex < 0) slideIndex = totalSlides - 1;
-          if (slideIndex >= totalSlides) slideIndex = 0;
-          
-          currentSlide = slideIndex;
-          highlightSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
-          
-          // Update active dot
-          highlightDots.forEach((dot, index) => {
-            if (index === currentSlide) {
-              dot.classList.add('active');
-            } else {
-              dot.classList.remove('active');
-            }
-          });
-        }
-        
-        // Set up dot click handlers
-        highlightDots.forEach((dot, index) => {
-          dot.addEventListener('click', function() {
-            goToSlide(index);
-          });
-        });
-        
-        // Set up arrow click handlers
-        highlightPrev.addEventListener('click', function() {
-          goToSlide(currentSlide - 1);
-        });
-        
-        highlightNext.addEventListener('click', function() {
-          goToSlide(currentSlide + 1);
-        });
-        
-        // Auto-advance slides every 5 seconds
-        let slideInterval = setInterval(() => {
-          goToSlide(currentSlide + 1);
-        }, 5000);
-        
-        // Pause auto-advance on hover
-        highlightSlides.addEventListener('mouseenter', () => {
-          clearInterval(slideInterval);
-        });
-        
-        highlightSlides.addEventListener('mouseleave', () => {
-          slideInterval = setInterval(() => {
-            goToSlide(currentSlide + 1);
-          }, 5000);
-        });
-      }
-      
-      // Fixtures Tabs Functionality
-      const fixtureTabs = document.querySelectorAll('.fixtures-tab');
-      const fixtureContents = document.querySelectorAll('.fixtures-content');
-      
-      if (fixtureTabs.length && fixtureContents.length) {
-        fixtureTabs.forEach(tab => {
-          tab.addEventListener('click', function() {
-            // Remove active class from all tabs
-            fixtureTabs.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Get the tab content to show
-            const tabContentId = `${this.getAttribute('data-tab')}-content`;
-            
-            // Hide all tab contents
-            fixtureContents.forEach(content => {
-              content.classList.remove('active');
-            });
-            
-            // Show the selected tab content
-            document.getElementById(tabContentId).classList.add('active');
-          });
-        });
-      }
-      
-      // Enhanced Player Carousel Functionality
-      const playerCarousel = document.getElementById('player-carousel');
-      const playerPrev = document.getElementById('player-prev');
-      const playerNext = document.getElementById('player-next');
-      const playerCards = document.querySelectorAll('.player-card');
-      const playerDots = document.getElementById('player-dots');
-      
-      if (playerCarousel && playerPrev && playerNext && playerCards.length && playerDots) {
-        const cardWidth = 280; // Width of a player card
-        const gap = 24; // Gap between cards
-        const visibleCards = Math.min(3, playerCards.length);
-        let currentPosition = 0;
-        const maxPosition = Math.max(0, playerCards.length - visibleCards);
-        
-        // Create dots for player carousel
-        for (let i = 0; i <= maxPosition; i++) {
-          const dot = document.createElement('div');
-          dot.classList.add('player-carousel-dot');
-          if (i === 0) dot.classList.add('active');
-          dot.setAttribute('data-position', i);
-          playerDots.appendChild(dot);
-        }
-        
-        const playerDotElements = document.querySelectorAll('.player-carousel-dot');
-        
-        // Function to update carousel position
-        function updatePlayerCarousel() {
-          playerCarousel.style.transform = `translateX(-${currentPosition * (cardWidth + gap)}px)`;
-          
-          // Update active dot
-          playerDotElements.forEach((dot, index) => {
-            if (index === currentPosition) {
-              dot.classList.add('active');
-            } else {
-              dot.classList.remove('active');
-            }
-          });
-          
-          // Enable/disable arrows
-          if (currentPosition === 0) {
-            playerPrev.style.opacity = '0.5';
-            playerPrev.style.cursor = 'not-allowed';
-          } else {
-            playerPrev.style.opacity = '1';
-            playerPrev.style.cursor = 'pointer';
-          }
-          
-          if (currentPosition === maxPosition) {
-            playerNext.style.opacity = '0.5';
-            playerNext.style.cursor = 'not-allowed';
-          } else {
-            playerNext.style.opacity = '1';
-            playerNext.style.cursor = 'pointer';
-          }
-        }
-        
-        // Set up arrow click handlers
-        playerPrev.addEventListener('click', function() {
-          if (currentPosition > 0) {
-            currentPosition--;
-            updatePlayerCarousel();
-          }
-        });
-        
-        playerNext.addEventListener('click', function() {
-          if (currentPosition < maxPosition) {
-            currentPosition++;
-            updatePlayerCarousel();
-          }
-        });
-        
-        // Set up dot click handlers
-        playerDotElements.forEach(dot => {
-          dot.addEventListener('click', function() {
-            currentPosition = parseInt(this.getAttribute('data-position'));
-            updatePlayerCarousel();
-          });
-        });
-        
-        // Player filter functionality
-        const filterButtons = document.querySelectorAll('.player-filter-button');
-        
-        filterButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            // Update active button
-            filterButtons.forEach(btn => {
-              btn.classList.remove('active');
-            });
-            this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            
-            // Filter player cards with animation
-            playerCards.forEach(card => {
-              const role = card.getAttribute('data-role');
-              card.classList.remove('animate-fade-in');
-              
-              if (filter === 'all' || role === filter) {
-                setTimeout(() => {
-                  card.style.display = 'block';
-                  card.classList.add('animate-fade-in');
-                }, 50);
-              } else {
-                card.style.display = 'none';
-              }
-            });
-            
-            // Reset carousel position
-            currentPosition = 0;
-            updatePlayerCarousel();
-          });
-        });
-        
-        // Initialize carousel
-        updatePlayerCarousel();
-        
-        // Add touch swipe functionality for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        playerCarousel.addEventListener('touchstart', e => {
-          touchStartX = e.changedTouches[0].screenX;
-        }, false);
-        
-        playerCarousel.addEventListener('touchend', e => {
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
-        }, false);
-        
-        function handleSwipe() {
-          if (touchEndX < touchStartX - 50) {
-            // Swipe left
-            if (currentPosition < maxPosition) {
-              currentPosition++;
-              updatePlayerCarousel();
-            }
-          } else if (touchEndX > touchStartX + 50) {
-            // Swipe right
-            if (currentPosition > 0) {
-              currentPosition--;
-              updatePlayerCarousel();
-            }
-          }
-        }
-        
-        // Add keyboard navigation
-        document.addEventListener('keydown', e => {
-          if (e.key === 'ArrowLeft') {
-            if (currentPosition > 0) {
-              currentPosition--;
-              updatePlayerCarousel();
-            }
-          } else if (e.key === 'ArrowRight') {
-            if (currentPosition < maxPosition) {
-              currentPosition++;
-              updatePlayerCarousel();
-            }
-          }
-        });
-        
-        // Add hover effect to show player details
-        playerCards.forEach(card => {
-          card.addEventListener('mouseenter', function() {
-            this.style.zIndex = '10';
-          });
-          
-          card.addEventListener('mouseleave', function() {
-            this.style.zIndex = '1';
-          });
-        });
-      }
-      
-      // Add scroll animations
-      const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.section-header, .testimonial-card, .sponsor-card');
-        
-        elements.forEach(element => {
-          const elementPosition = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-          
-          if (elementPosition < windowHeight - 100) {
-            if (!element.classList.contains('animate-fade-in')) {
-              element.classList.add('animate-fade-in');
-            }
-          }
-        });
-      };
-      
-      // Run on scroll
-      window.addEventListener('scroll', animateOnScroll);
-      
-      // Run once on load
-      animateOnScroll();
+  document.addEventListener("DOMContentLoaded", function () {
+    const playerCarousel = document.getElementById("player-carousel");
+    const playerPrev = document.getElementById("player-prev");
+    const playerNext = document.getElementById("player-next");
+    const filterButtons = document.querySelectorAll(".player-filter-button");
+  
+    // Smooth Scrolling for Carousel
+    playerNext.addEventListener("click", () => {
+      playerCarousel.scrollBy({ left: 300, behavior: "smooth" });
     });
+  
+    playerPrev.addEventListener("click", () => {
+      playerCarousel.scrollBy({ left: -300, behavior: "smooth" });
+    });
+  
+    // Filter Players
+    filterButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        this.classList.add("active");
+  
+        const filter = this.getAttribute("data-filter");
+        document.querySelectorAll(".player-card").forEach(card => {
+          card.style.display = (filter === "all" || card.getAttribute("data-role") === filter) ? "block" : "none";
+        });
+      });
+    });
+  });
   </script>
+  
+  <!-- Tailwind CSS (Add this if not included in your project) -->
+  <style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .player-filter-button {
+    background: #1E40AF; 
+    color: white; 
+    padding: 8px 12px; 
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .player-filter-button:hover, .player-filter-button.active {
+    background: #2563EB;
+  }
+  </style>
+  
 
   <!-- Merchandise Section -->
   <section id="merchandise" class="py-16 bg-cskBlue">
